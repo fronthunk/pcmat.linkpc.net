@@ -23,7 +23,7 @@
   header{
     background:var(--navy);
     color:#fff;
-    padding:18px 40px;
+    padding:18px 60px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -102,8 +102,22 @@
   @media(max-width:768px){
     .grid{grid-template-columns:1fr;}
     .stats{grid-template-columns:repeat(2,1fr);gap:24px;}
-    .hero h1{font-size:30px;}
+    .hero h1{font-size:28px;}
+    .hero{padding:60px 20px;}
+    .hero .big-phone{font-size:32px;}
+    header{padding:14px 20px;flex-wrap:wrap;}
+    header .logo{font-size:18px;}
+    header .logo svg{width:30px;height:34px;}
     header nav{display:none;}
+    section{padding:44px 20px;}
+    h2{font-size:22px;}
+    .card{padding:20px;}
+    .cta{padding:44px 20px;}
+  }
+  @media(max-width:420px){
+    .hero .big-phone{font-size:24px;letter-spacing:0;}
+    .hero h1{font-size:22px;}
+    .stats{grid-template-columns:1fr 1fr;}
   }
 </style>
 </head>
