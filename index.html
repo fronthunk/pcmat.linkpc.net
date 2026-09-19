@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Super Shield | Enterprise IT Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --navy:#0d1b2a;
+    --steel:#1b3a5c;
+    --accent:#4CBB17;
+    --light:#f5f7fa;
+    --grey:#5c6b7a;
+    --border:#dde3ea;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+    color:var(--navy);
+    background:var(--light);
+    line-height:1.6;
+  }
+  header{
+    background:var(--navy);
+    color:#fff;
+    padding:18px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  header .logo{font-size:26px;font-weight:700;letter-spacing:0.5px;display:flex;align-items:center;gap:12px;}
+  header nav a{color:#cdd8e3;text-decoration:none;margin-left:28px;font-size:14px;}
+  header .phone{color:#fff;text-decoration:none;font-weight:600;margin-left:28px;}
+  .hero{
+    background:linear-gradient(135deg,var(--navy),var(--steel));
+    color:#fff;
+    padding:90px 40px;
+    text-align:center;
+  }
+  .hero h1{font-size:42px;max-width:800px;margin:0 auto 20px;font-weight:700;}
+  .hero p{font-size:18px;color:#c9d6e3;max-width:600px;margin:0 auto 32px;}
+  .hero .big-phone{
+    display:inline-block;
+    font-size:56px;
+    font-weight:800;
+    color:#4CBB17;
+    text-decoration:none;
+    margin:10px 0 32px;
+    letter-spacing:1px;
+  }
+  .btn{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:14px 32px;
+    font-size:16px;
+    border-radius:4px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+  }
+  section{padding:70px 40px;max-width:1100px;margin:0 auto;}
+  h2{font-size:28px;margin-bottom:12px;text-align:center;}
+  .subhead{text-align:center;color:var(--grey);margin-bottom:48px;font-size:16px;}
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  .card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:6px;
+    padding:28px;
+  }
+  .card h3{font-size:18px;margin-bottom:10px;color:var(--steel);}
+  .card p{color:var(--grey);font-size:14px;}
+  .stats{
+    background:var(--steel);
+    color:#fff;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+    padding:50px 40px;
+  }
+  .stats div h3{font-size:32px;}
+  .stats div p{color:#c9d6e3;font-size:14px;margin-top:4px;}
+  .cta{
+    text-align:center;
+    background:var(--navy);
+    color:#fff;
+    padding:60px 40px;
+  }
+  .cta h2{color:#fff;}
+  footer{
+    background:#0a1420;
+    color:#8996a5;
+    text-align:center;
+    padding:24px;
+    font-size:13px;
+  }
+  @media(max-width:768px){
+    .grid{grid-template-columns:1fr;}
+    .stats{grid-template-columns:repeat(2,1fr);gap:24px;}
+    .hero h1{font-size:30px;}
+    header nav{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <svg width="42" height="48" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M14 0L27 5V15C27 23 21.5 29 14 32C6.5 29 1 23 1 15V5L14 0Z" fill="#4CBB17"/>
+      <path d="M14 4L23 7.5V15C23 21 19 25.5 14 28V4Z" fill="#3a9412"/>
+    </svg>
+    SUPER SHIELD
+  </div>
+  <nav>
+    <a href="#services">Solutions</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Enterprise-Grade IT Solutions to Accelerate Your Digital Transformation</h1>
+  <br>
+  <a href="tel:3524557836" class="big-phone phone-big">(352) 455-7836</a>
+  <p>We deliver scalable, mission-critical technology solutions that drive operational efficiency and unlock sustainable growth for forward-thinking organizations.</p>
+  <a href="#contact" class="btn">Schedule a Consultation</a>
+</div>
+
+<section id="services">
+  <h2>Our Core Competencies</h2>
+  <p class="subhead">End-to-end solutions engineered for enterprise scale</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Cloud Infrastructure & Migration</h3>
+      <p>Leverage our best-in-class cloud architecture to optimize your total cost of ownership while ensuring seamless scalability across your technology stack.</p>
+    </div>
+    <div class="card">
+      <h3>Managed IT Services</h3>
+      <p>Our proactive, 24/7 managed services ensure maximum uptime and business continuity, allowing you to focus on your core competencies.</p>
+    </div>
+    <div class="card">
+      <h3>Cybersecurity Solutions</h3>
+      <p>Mitigate risk with our robust, enterprise-grade security frameworks designed to safeguard your critical assets against evolving threat landscapes.</p>
+    </div>
+    <div class="card">
+      <h3>Digital Transformation Consulting</h3>
+      <p>Partner with our strategic advisors to reimagine your business processes and drive value-added innovation across your organization.</p>
+    </div>
+    <div class="card">
+      <h3>Data Analytics & BI</h3>
+      <p>Unlock actionable insights from your data ecosystem to enable data-driven decision-making and maximize ROI.</p>
+    </div>
+    <div class="card">
+      <h3>Custom Software Development</h3>
+      <p>We architect bespoke, future-proof solutions tailored to your unique business requirements and industry vertical.</p>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div><h3>500+</h3><p>Enterprise Clients</p></div>
+  <div><h3>99.9%</h3><p>Uptime SLA</p></div>
+  <div><h3>15+</h3><p>Years of Experience</p></div>
+  <div><h3>24/7</h3><p>Global Support</p></div>
+</div>
+
+<section id="why">
+  <h2>Why Partner With Us</h2>
+  <p class="subhead">A trusted business partner committed to your success</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Proven Track Record</h3>
+      <p>A demonstrated history of delivering measurable business outcomes across Fortune 500 clients and emerging enterprises alike.</p>
+    </div>
+    <div class="card">
+      <h3>Industry-Leading Expertise</h3>
+      <p>Our certified professionals bring deep domain knowledge to every engagement, ensuring best-in-class execution.</p>
+    </div>
+    <div class="card">
+      <h3>Scalable Engagement Models</h3>
+      <p>Flexible, outcome-driven engagement structures designed to align with your evolving business objectives.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta" id="contact">
+  <h2>Ready to Transform Your Technology?</h2>
+  <p style="color:#c9d6e3;margin-bottom:28px;">Connect with our solutions team to explore how we can drive value for you.</p>
+  <a href="tel:3524557836" id="primary-call" class="btn call-button">Call (352) 455-7836</a>
+</div>
+
+<footer>
+  &copy; 2026 Super Shield. All rights reserved.
+</footer>
+
+<script>
+(function() {
+  const start = Date.now();
+  const events = [];
+
+  function track(action) {
+    events.push(action);
+  }
+
+  fetch('/api/notify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      type: 'arrival',
+      page: location.pathname,
+      referrer: document.referrer,
+      userAgent: navigator.userAgent
+    })
+  }).catch(() => {});
+
+  document.getElementById('primary-call')?.addEventListener('click', () => track('called'));
+  document.querySelectorAll('a.call-button, a.phone-big').forEach(el =>
+    el.addEventListener('click', () => track('called'))
+  );
+  document.querySelector('form')?.addEventListener('submit', () => track('form_submitted'));
+
+  let maxScroll = 0;
+  window.addEventListener('scroll', () => {
+    const pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+    if (pct > maxScroll) maxScroll = pct;
+  });
+
+  let sent = false;
+  function sendReport() {
+    if (sent) return;
+    sent = true;
+    const duration = Math.round((Date.now() - start) / 1000);
+    const payload = JSON.stringify({
+      type: 'exit',
+      page: location.pathname,
+      referrer: document.referrer,
+      userAgent: navigator.userAgent,
+      duration,
+      maxScroll,
+      events
+    });
+    navigator.sendBeacon('/api/notify', new Blob([payload], { type: 'application/json' }));
+  }
+
+  window.addEventListener('pagehide', sendReport);
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') sendReport();
+  });
+})();
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xr4uh5wz1g");
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2BD8Z64MH1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2BD8Z64MH1');
+</script>
+
+<call-us-selector
+  party="americantechnologies"
+  phonesystem-url="https://1001.3cx.cloud">
+</call-us-selector>
+
+<script
+  charset="utf-8"
+  defer
+  id="tcx-callus-js"
+  src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js">
+</script>
+
+</body>
+</html>
