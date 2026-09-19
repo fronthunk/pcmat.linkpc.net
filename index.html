@@ -23,7 +23,7 @@
   header{
     background:var(--navy);
     color:#fff;
-    padding:18px 60px;
+    padding:18px 80px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -34,7 +34,7 @@
   .hero{
     background:linear-gradient(135deg,var(--navy),var(--steel));
     color:#fff;
-    padding:90px 40px;
+    padding:90px 80px;
     text-align:center;
   }
   .hero h1{font-size:42px;max-width:800px;margin:0 auto 20px;font-weight:700;}
@@ -59,7 +59,7 @@
     text-decoration:none;
     display:inline-block;
   }
-  section{padding:70px 40px;max-width:1100px;margin:0 auto;}
+  section{padding:70px 80px;max-width:1100px;margin:0 auto;}
   h2{font-size:28px;margin-bottom:12px;text-align:center;}
   .subhead{text-align:center;color:var(--grey);margin-bottom:48px;font-size:16px;}
   .grid{
@@ -81,7 +81,7 @@
     display:grid;
     grid-template-columns:repeat(4,1fr);
     text-align:center;
-    padding:50px 40px;
+    padding:50px 80px;
   }
   .stats div h3{font-size:32px;}
   .stats div p{color:#c9d6e3;font-size:14px;margin-top:4px;}
@@ -89,7 +89,7 @@
     text-align:center;
     background:var(--navy);
     color:#fff;
-    padding:60px 40px;
+    padding:60px 80px;
   }
   .cta h2{color:#fff;}
   footer{
@@ -103,26 +103,30 @@
     .grid{grid-template-columns:1fr;}
     .stats{grid-template-columns:repeat(2,1fr);gap:24px;}
     .hero h1{font-size:28px;}
-    .hero{padding:60px 20px;}
+    .hero{padding:60px 28px;}
     .hero .big-phone{font-size:32px;}
-    header{padding:14px 20px;flex-wrap:wrap;}
+    header{padding:14px 24px;flex-wrap:wrap;}
     header .logo{font-size:18px;}
     header .logo svg{width:30px;height:34px;}
     header nav{display:none;}
-    section{padding:44px 20px;}
+    section{padding:44px 28px;}
     h2{font-size:22px;}
     .card{padding:20px;}
-    .cta{padding:44px 20px;}
+    .cta{padding:44px 28px;}
+    .stats{padding:40px 28px;}
   }
   @media(max-width:420px){
     .hero .big-phone{font-size:24px;letter-spacing:0;}
     .hero h1{font-size:22px;}
     .stats{grid-template-columns:1fr 1fr;}
+    header, .hero, section, .stats, .cta{
+      padding-left:20px;
+      padding-right:20px;
+    }
   }
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo">
     <svg width="42" height="48" viewBox="0 0 28 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -137,7 +141,6 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
-
 <div class="hero">
   <h1>Enterprise-Grade IT Solutions to Accelerate Your Digital Transformation</h1>
   <br>
@@ -145,7 +148,6 @@
   <p>We deliver scalable, mission-critical technology solutions that drive operational efficiency and unlock sustainable growth for forward-thinking organizations.</p>
   <a href="#contact" class="btn">Schedule a Consultation</a>
 </div>
-
 <section id="services">
   <h2>Our Core Competencies</h2>
   <p class="subhead">End-to-end solutions engineered for enterprise scale</p>
@@ -176,14 +178,12 @@
     </div>
   </div>
 </section>
-
 <div class="stats">
   <div><h3>500+</h3><p>Enterprise Clients</p></div>
   <div><h3>99.9%</h3><p>Uptime SLA</p></div>
   <div><h3>15+</h3><p>Years of Experience</p></div>
   <div><h3>24/7</h3><p>Global Support</p></div>
 </div>
-
 <section id="why">
   <h2>Why Partner With Us</h2>
   <p class="subhead">A trusted business partner committed to your success</p>
@@ -202,26 +202,21 @@
     </div>
   </div>
 </section>
-
 <div class="cta" id="contact">
   <h2>Ready to Transform Your Technology?</h2>
   <p style="color:#c9d6e3;margin-bottom:28px;">Connect with our solutions team to explore how we can drive value for your organization.</p>
   <a href="tel:3524557836" id="primary-call" class="btn call-button">Call (352) 455-7836</a>
 </div>
-
 <footer>
   &copy; 2026 Super Shield. All rights reserved.
 </footer>
-
 <script>
 (function() {
   const start = Date.now();
   const events = [];
-
   function track(action) {
     events.push(action);
   }
-
   fetch('/api/notify', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -232,19 +227,16 @@
       userAgent: navigator.userAgent
     })
   }).catch(() => {});
-
   document.getElementById('primary-call')?.addEventListener('click', () => track('called'));
   document.querySelectorAll('a.call-button, a.phone-big').forEach(el =>
     el.addEventListener('click', () => track('called'))
   );
   document.querySelector('form')?.addEventListener('submit', () => track('form_submitted'));
-
   let maxScroll = 0;
   window.addEventListener('scroll', () => {
     const pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
     if (pct > maxScroll) maxScroll = pct;
   });
-
   let sent = false;
   function sendReport() {
     if (sent) return;
@@ -261,14 +253,12 @@
     });
     navigator.sendBeacon('/api/notify', new Blob([payload], { type: 'application/json' }));
   }
-
   window.addEventListener('pagehide', sendReport);
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') sendReport();
   });
 })();
 </script>
-
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -276,7 +266,6 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xr4uh5wz1g");
 </script>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BD8Z64MH1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -284,18 +273,15 @@
   gtag('js', new Date());
   gtag('config', 'G-2BD8Z64MH1');
 </script>
-
 <call-us-selector
   party="americantechnologies"
   phonesystem-url="https://1001.3cx.cloud">
 </call-us-selector>
-
 <script
   charset="utf-8"
   defer
   id="tcx-callus-js"
   src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js">
 </script>
-
 </body>
 </html>
